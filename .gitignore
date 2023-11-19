@@ -1,5 +1,6 @@
 ### ignore selenium profiles
 selenium_prof/
+sele_profiles/
 
 ### ignore virtualenv folder
 soloq/
@@ -7,3 +8,15 @@ soloq/
 ### pycaches
 __pycache__/*
 */__pycache__/
+
+###
+.idea/
+
+### ignore scratch files
+scratch_*.py
+asdfasdfasdf.txt
+some_json.txt
+
+scraped_results.zip
+scraped_results2
+
