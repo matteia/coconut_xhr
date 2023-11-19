@@ -3,3 +3,7 @@ selenium_prof/
 
 ### ignore virtualenv folder
 soloq/
+
+### pycaches
+__pycache__/*
+*/__pycache__/
