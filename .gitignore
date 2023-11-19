@@ -1,0 +1,5 @@
+### ignore selenium profiles
+selenium_prof/
+
+### ignore virtualenv folder
+soloq/
