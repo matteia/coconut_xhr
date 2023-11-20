@@ -35,7 +35,7 @@ def parse_result(one_player_record:list):
 def write_player_record(filepath, player, parsed_game_results):
     elo = filepath.split('/')[-2]
     filename = filepath.split('/')[-1].split('.')[0]
-    saved_filepath = f'{script_directory}/soloq_scrape/scraped_results/parsed_200plus/{elo}/{filename}/{player}.txt'
+    saved_filepath = f'{script_directory}/scraped_results/parsed_200plus/{elo}/{filename}/{player}.txt'
 
     with open(saved_filepath, 'w') as file:
         file.write(str(parsed_game_results))

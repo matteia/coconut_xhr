@@ -61,7 +61,7 @@ parti_num = 1
 # Done: 0, 1, 2, 3, 4 // bronze
 # Done: 0,  // silver
 
-filename = f'{script_directory}/soloq_scrape/scraped_results/partitions_200plus/{elo}/partition_{parti_num}.txt'
+filename = f'{script_directory}/scraped_results/partitions_200plus/{elo}/partition_{parti_num}.txt'
 
 driver.get('https://www.op.gg/')
 
