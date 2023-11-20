@@ -35,7 +35,9 @@ from scrape_logger import scrape_logger, determine_start
 script_directory = pathlib.Path().absolute()
 
 options = Options()
-options.add_argument(f"user-data-dir={script_directory}/sele_profiles/cosastreinta")
+# options.add_argument('--headless')
+# options.add_argument('--no-sandbox')
+options.add_argument(f"user-data-dir={script_directory}/sele_profiles/aarthur")
 options.add_argument('--disable-application-cache')
 options.add_experimental_option("useAutomationExtension", False)
 options.add_experimental_option("excludeSwitches", ["enable-automation"])
@@ -46,7 +48,7 @@ options.add_experimental_option("excludeSwitches", ["enable-automation"])
 driver = webdriver.Chrome(options=options)
 driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {"source": """ Object.defineProperty(navigator, 'webdriver', { get: () => undefined }) """})
 
-# sleep(60)
+# sleep(120)
 
 #### timer ##############################
 start = time()
@@ -54,11 +56,12 @@ print(strftime('%Y-%m-%d %H:%M:%S', localtime()))
 print('\n')
 ##############################
 
-elo = 'bronze'
-parti_num = 3
-# Done: 0, 1, 2
+elo = 'silver'
+parti_num = 1
+# Done: 0, 1, 2, 3, 4 // bronze
+# Done: 0,  // silver
 
-filename = f'../soloq_scrape/scraped_results/partitions_200plus/{elo}/partition_{parti_num}.txt'
+filename = f'{script_directory}/soloq_scrape/scraped_results/partitions_200plus/{elo}/partition_{parti_num}.txt'
 
 driver.get('https://www.op.gg/')
 
@@ -78,7 +81,7 @@ one_list = ast.literal_eval(one_list)
 
 player_list = [player[0] for player in one_list]
 ### set player_list length
-player_list = player_list[:900]
+player_list = player_list[:510]
 
 print(f'player_list: {player_list}')
 print(f'len(player_lst): {len(player_list)}')
@@ -134,7 +137,7 @@ for i in range(len(all_records)):
 print("done in %0.3fs." % (time() - start))
 print(strftime('%Y-%m-%d %H:%M:%S', localtime()))
 
-sleep(10)
+# sleep(10)
 
 ### shut down upon completion
 # os.system('shutdown -s')

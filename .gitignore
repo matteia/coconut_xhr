@@ -20,3 +20,4 @@ some_json.txt
 scraped_results.zip
 scraped_results2
 
+*.pem
