@@ -21,3 +21,6 @@ scraped_results.zip
 scraped_results2
 
 *.pem
+
+### ignore nohup.out
+nohup.out
