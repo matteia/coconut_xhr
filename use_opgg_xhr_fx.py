@@ -57,9 +57,9 @@ print('\n')
 ##############################
 
 elo = 'silver'
-parti_num = 1
+parti_num = 3
 # Done: 0, 1, 2, 3, 4 // bronze
-# Done: 0,  // silver
+# Done: 0, 1,  // silver
 
 filename = f'{script_directory}/scraped_results/partitions_200plus/{elo}/partition_{parti_num}.txt'
 
@@ -81,7 +81,7 @@ one_list = ast.literal_eval(one_list)
 
 player_list = [player[0] for player in one_list]
 ### set player_list length
-player_list = player_list[:510]
+player_list = player_list[:]
 
 print(f'player_list: {player_list}')
 print(f'len(player_lst): {len(player_list)}')
@@ -140,5 +140,5 @@ print(strftime('%Y-%m-%d %H:%M:%S', localtime()))
 # sleep(10)
 
 ### shut down upon completion
-# os.system('shutdown -s')
+os.system('shutdown -s')
 
