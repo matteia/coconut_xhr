@@ -37,7 +37,7 @@ script_directory = pathlib.Path().absolute()
 options = Options()
 options.add_argument('--headless')
 options.add_argument('--no-sandbox')
-options.add_argument(f"user-data-dir={script_directory}/sele_profiles/alpha")
+options.add_argument(f"user-data-dir={script_directory}/sele_profiles/zulu")
 options.add_argument('--disable-application-cache')
 options.add_experimental_option("useAutomationExtension", False)
 options.add_experimental_option("excludeSwitches", ["enable-automation"])
@@ -56,9 +56,10 @@ print(strftime('%Y-%m-%d %H:%M:%S', localtime()))
 print('\n')
 ##############################
 
-elo = 'emerald'
-parti_num = 8
-# Done: 0, 1, 2, 3, 4, 5, 6, 7  // emerald
+elo = 'silver'
+parti_num = 3
+# Done: 0, 1, 2, 3, 4 // bronze
+# Done: 0, 1,  // silver
 
 filename = f'{script_directory}/scraped_results/partitions_200plus/{elo}/partition_{parti_num}.txt'
 
@@ -139,5 +140,5 @@ print(strftime('%Y-%m-%d %H:%M:%S', localtime()))
 # sleep(10)
 
 ### shut down upon completion
-# os.system('shutdown -s')
+os.system('shutdown -s')
 
