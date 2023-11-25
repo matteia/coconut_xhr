@@ -56,9 +56,10 @@ print(strftime('%Y-%m-%d %H:%M:%S', localtime()))
 print('\n')
 ##############################
 
-elo = 'diamond'
-parti_num = 21
-# Done: 0, 1, 2, 3, 4, 5, 6, 7, // ch_gm_m
+elo = 'silver'
+parti_num = 3
+# Done: 0, 1, 2, 3, 4 // bronze
+# Done: 0, 1,  // silver
 
 filename = f'{script_directory}/scraped_results/partitions_200plus/{elo}/partition_{parti_num}.txt'
 
@@ -139,5 +140,5 @@ print(strftime('%Y-%m-%d %H:%M:%S', localtime()))
 # sleep(10)
 
 ### shut down upon completion
-# os.system('shutdown -s')
+os.system('shutdown -s')
 
