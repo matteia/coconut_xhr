@@ -35,9 +35,9 @@ from scrape_logger import scrape_logger, determine_start
 script_directory = pathlib.Path().absolute()
 
 options = Options()
-# options.add_argument('--headless')
-# options.add_argument('--no-sandbox')
-options.add_argument(f"user-data-dir={script_directory}/sele_profiles/aarthur")
+options.add_argument('--headless')
+options.add_argument('--no-sandbox')
+options.add_argument(f"user-data-dir={script_directory}/sele_profiles/zulu")
 options.add_argument('--disable-application-cache')
 options.add_experimental_option("useAutomationExtension", False)
 options.add_experimental_option("excludeSwitches", ["enable-automation"])
@@ -56,10 +56,10 @@ print(strftime('%Y-%m-%d %H:%M:%S', localtime()))
 print('\n')
 ##############################
 
-elo = 'silver'
-parti_num = 1
-# Done: 0, 1, 2, 3, 4 // bronze
-# Done: 0,  // silver
+elo = 'emerald'
+parti_num = 14
+# Done: 0, 1, 2, 3, 4, 5, 6 // gold
+# Done: 9, 10, 11, 12, 13 // emerald
 
 filename = f'{script_directory}/scraped_results/partitions_200plus/{elo}/partition_{parti_num}.txt'
 
@@ -81,7 +81,7 @@ one_list = ast.literal_eval(one_list)
 
 player_list = [player[0] for player in one_list]
 ### set player_list length
-player_list = player_list[:510]
+player_list = player_list[:]
 
 print(f'player_list: {player_list}')
 print(f'len(player_lst): {len(player_list)}')
