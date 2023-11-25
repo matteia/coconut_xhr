@@ -61,7 +61,6 @@ parti_num = 3
 # Done: 0, 1, 2, 3, 4 // bronze
 # Done: 0, 1,  // silver
 
-
 filename = f'{script_directory}/scraped_results/partitions_200plus/{elo}/partition_{parti_num}.txt'
 
 driver.get('https://www.op.gg/')
